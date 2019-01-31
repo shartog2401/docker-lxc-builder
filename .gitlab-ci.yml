@@ -13,6 +13,8 @@ before_script:
   
 build:
   stage: build
+  only:
+  - latest
   script:
   - docker build -t $IMAGE_TAG .
   - docker push $IMAGE_TAG
